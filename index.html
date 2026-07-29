@@ -270,18 +270,21 @@
   .ad-split{display:grid;grid-template-columns:1fr 1fr;}
   .ad-half{
     aspect-ratio:3/4;
-    display:flex;flex-direction:column;align-items:center;justify-content:center;
-    gap:10px;
-    background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 2px,transparent 2px 14px);
+    display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
     position:relative;
+    background-size:cover;
+    background-position:center 18%;
+    overflow:hidden;
   }
   .ad-half.before{border-right:1px solid rgba(255,255,255,.08);}
-  .ad-half svg{width:34px;height:34px;opacity:.35;}
-  .ad-half .tag{
-    font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);font-weight:700;
+  .ad-half::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(0deg,rgba(4,14,13,.85) 0%,rgba(4,14,13,.05) 45%,transparent 70%);
   }
   .ad-half .lbl{
-    font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;
+    position:relative;z-index:1;
+    font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft);font-weight:700;
+    margin-bottom:12px;
   }
   .ad-foot{
     padding:16px 20px;display:flex;align-items:center;justify-content:space-between;
@@ -289,6 +292,18 @@
   }
   .ad-foot span{color:var(--gold-soft);font-size:.78rem;font-weight:700;letter-spacing:.03em;}
   .ad-foot .arrow{color:rgba(255,255,255,.3);font-size:.9rem;}
+  .ad-video{
+    margin:56px auto 0;max-width:280px;
+    border-radius:20px;overflow:hidden;position:relative;
+    border:1px solid rgba(201,161,90,.25);
+    box-shadow:0 30px 60px -30px rgba(0,0,0,.6);
+  }
+  .ad-video-el{width:100%;display:block;aspect-ratio:9/16;object-fit:cover;background:var(--petrol-900);}
+  .ad-video-tag{
+    position:absolute;left:0;right:0;bottom:0;padding:14px 16px;
+    background:linear-gradient(0deg,rgba(4,14,13,.9),transparent);
+    color:var(--gold-soft);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700;text-align:center;
+  }
 
   /* ---------- depoimentos ---------- */
   #depoimentos{background:var(--cream);}
@@ -547,25 +562,29 @@
     <div class="ad-grid reveal-stagger">
       <div class="ad-card reveal">
         <div class="ad-split">
-          <div class="ad-half before"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="color:#fff"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span class="tag">[Foto Caso 1]</span><span class="lbl">Antes</span></div>
-          <div class="ad-half"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="color:#fff"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span class="tag">[Foto Caso 1]</span><span class="lbl">Depois</span></div>
+          <div class="ad-half before" style="background-image:url('assets/img/casos/caso1-antes.jpg')"><span class="lbl">Antes</span></div>
+          <div class="ad-half" style="background-image:url('assets/img/casos/caso1-depois.jpg')"><span class="lbl">Depois</span></div>
         </div>
         <div class="ad-foot"><span>Caso 01</span><span class="arrow">&#8594;</span></div>
       </div>
       <div class="ad-card reveal">
         <div class="ad-split">
-          <div class="ad-half before"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="color:#fff"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span class="tag">[Foto Caso 2]</span><span class="lbl">Antes</span></div>
-          <div class="ad-half"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="color:#fff"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span class="tag">[Foto Caso 2]</span><span class="lbl">Depois</span></div>
+          <div class="ad-half before" style="background-image:url('assets/img/casos/caso2-antes.jpg')"><span class="lbl">Antes</span></div>
+          <div class="ad-half" style="background-image:url('assets/img/casos/caso2-depois.jpg')"><span class="lbl">Depois</span></div>
         </div>
         <div class="ad-foot"><span>Caso 02</span><span class="arrow">&#8594;</span></div>
       </div>
       <div class="ad-card reveal">
         <div class="ad-split">
-          <div class="ad-half before"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="color:#fff"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span class="tag">[Foto Caso 3]</span><span class="lbl">Antes</span></div>
-          <div class="ad-half"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="color:#fff"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span class="tag">[Foto Caso 3]</span><span class="lbl">Depois</span></div>
+          <div class="ad-half before" style="background-image:url('assets/img/casos/caso3-antes.jpg')"><span class="lbl">Antes</span></div>
+          <div class="ad-half" style="background-image:url('assets/img/casos/caso3-depois.jpg')"><span class="lbl">Depois</span></div>
         </div>
         <div class="ad-foot"><span>Caso 03</span><span class="arrow">&#8594;</span></div>
       </div>
+    </div>
+    <div class="ad-video reveal">
+      <video class="ad-video-el" src="assets/img/casos/video-resultado.mp4" poster="assets/img/casos/video-resultado-poster.jpg" autoplay muted loop playsinline></video>
+      <span class="ad-video-tag">Paciente real · resultado em vídeo</span>
     </div>
   </div>
 </section>
