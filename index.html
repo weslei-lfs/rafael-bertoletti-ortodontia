@@ -226,10 +226,13 @@
   .t-card:hover{transform:translateY(-6px);border-color:rgba(201,161,90,.5);}
   .t-icon{
     width:64px;height:64px;border-radius:16px;overflow:hidden;margin-bottom:22px;
-    background:var(--petrol-950);
+    background:radial-gradient(120% 120% at 30% 20%,var(--petrol-700),var(--petrol-950));
+    border:1px solid rgba(201,161,90,.22);
     display:flex;align-items:center;justify-content:center;
+    transition:border-color .35s ease,background .35s ease;
   }
-  .t-icon img{width:100%;height:100%;object-fit:cover;}
+  .t-card:hover .t-icon{border-color:rgba(201,161,90,.55);}
+  .t-icon svg{width:30px;height:30px;color:var(--gold-soft);}
   .t-card h3{color:var(--white);font-size:1.18rem;margin-bottom:.45em;}
   .t-card p{color:var(--muted);font-size:.92rem;margin-bottom:0;}
 
@@ -247,9 +250,10 @@
   }
   .d-icon{
     width:52px;height:52px;border-radius:13px;overflow:hidden;margin-bottom:18px;
-    background:var(--petrol-900);
+    background:radial-gradient(120% 120% at 30% 20%,var(--petrol-700),var(--petrol-900));
+    display:flex;align-items:center;justify-content:center;
   }
-  .d-icon img{width:100%;height:100%;object-fit:cover;}
+  .d-icon svg{width:25px;height:25px;color:var(--gold);}
   .d-card h3{font-size:1.02rem;margin-bottom:.4em;color:var(--petrol-900);}
   .d-card p{font-size:.87rem;color:#5c584c;margin-bottom:0;}
 
@@ -431,22 +435,44 @@
     </div>
     <div class="grid-4 reveal-stagger">
       <div class="t-card reveal">
-        <div class="t-icon"><img src="assets/img/icon-aparelho-fixo.jpg" alt="Aparelho Fixo" loading="lazy"></div>
+        <div class="t-icon" role="img" aria-label="Aparelho Fixo">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 24h32"/>
+            <circle cx="14" cy="24" r="4.2"/><circle cx="24" cy="24" r="4.2"/><circle cx="34" cy="24" r="4.2"/>
+            <path d="M14 19.2v-3.7M14 28.8v3.7M24 19.2v-3.7M24 28.8v3.7M34 19.2v-3.7M34 28.8v3.7"/>
+          </svg>
+        </div>
         <h3>Aparelho Fixo</h3>
         <p>A base sólida da ortodontia, com brackets metálicos de alta precisão para correções de qualquer complexidade.</p>
       </div>
       <div class="t-card reveal">
-        <div class="t-icon"><img src="assets/img/icon-aparelho-estetico.jpg" alt="Aparelho Estético" loading="lazy"></div>
+        <div class="t-icon" role="img" aria-label="Aparelho Estético">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 24h32" stroke-dasharray=".2 6.5"/>
+            <circle cx="14" cy="24" r="5"/><circle cx="24" cy="24" r="5"/><circle cx="34" cy="24" r="5"/>
+          </svg>
+        </div>
         <h3>Aparelho Estético</h3>
         <p>Discrição no dia a dia sem abrir mão da eficácia — brackets estéticos que discretamente corrigem o sorriso.</p>
       </div>
       <div class="t-card reveal">
-        <div class="t-icon"><img src="assets/img/icon-alinhadores.jpg" alt="Alinhadores Invisíveis" loading="lazy"></div>
+        <div class="t-icon" role="img" aria-label="Alinhadores Invisíveis">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c0 10.5 6.5 17 15 17s15-6.5 15-17"/>
+            <path d="M14 19.5c0 8 4.7 13 10 13s10-5 10-13"/>
+          </svg>
+        </div>
         <h3>Ortodontia Invisível</h3>
         <p>Alinhadores transparentes e removíveis, planejados digitalmente para uma rotina sem restrições.</p>
       </div>
       <div class="t-card reveal">
-        <div class="t-icon"><img src="assets/img/icon-manutencao.jpg" alt="Manutenção Ortodôntica" loading="lazy"></div>
+        <div class="t-icon" role="img" aria-label="Manutenção Ortodôntica">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M36.5 16.5A13 13 0 1 0 39 25"/>
+            <path d="M36.5 8v8.5H28"/>
+            <path d="M17 25.5l4.3 4.3L30 21"/>
+          </svg>
+        </div>
         <h3>Manutenção Ortodôntica</h3>
         <p>Acompanhamento periódico do seu tratamento em andamento, com ajustes finos a cada retorno.</p>
       </div>
@@ -462,22 +488,48 @@
     </div>
     <div class="grid-4b reveal-stagger">
       <div class="d-card reveal">
-        <div class="d-icon"><img src="assets/img/icon-tecnologia.jpg" alt="Tecnologia digital" loading="lazy"></div>
+        <div class="d-icon" role="img" aria-label="Tecnologia digital">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 17v-3.5A2.5 2.5 0 0 1 12.5 11H16"/>
+            <path d="M38 17v-3.5A2.5 2.5 0 0 0 35.5 11H32"/>
+            <path d="M10 31v3.5A2.5 2.5 0 0 0 12.5 37H16"/>
+            <path d="M38 31v3.5a2.5 2.5 0 0 1-2.5 2.5H32"/>
+            <path d="M10 24h28" stroke-width="1.3"/>
+          </svg>
+        </div>
         <h3>Tecnologia digital</h3>
         <p>Planejamento e acompanhamento apoiados em ferramentas digitais modernas.</p>
       </div>
       <div class="d-card reveal">
-        <div class="d-icon"><img src="assets/img/icon-humanizado.jpg" alt="Atendimento humanizado" loading="lazy"></div>
+        <div class="d-icon" role="img" aria-label="Atendimento humanizado">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round">
+            <path d="M24 37.5S11.5 29 11.5 19.3a7.3 7.3 0 0 1 13-4.6 7.3 7.3 0 0 1 12 8.5c-2.2 6.4-12.5 14.3-12.5 14.3Z"/>
+          </svg>
+        </div>
         <h3>Atendimento humanizado</h3>
         <p>Cada consulta com tempo e atenção dedicados a ouvir e explicar cada passo.</p>
       </div>
       <div class="d-card reveal">
-        <div class="d-icon"><img src="assets/img/icon-planejamento.jpg" alt="Planejamento personalizado" loading="lazy"></div>
+        <div class="d-icon" role="img" aria-label="Planejamento personalizado">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+            <circle cx="24" cy="24" r="13.5"/>
+            <circle cx="24" cy="24" r="6.5"/>
+            <circle cx="24" cy="24" r="1.4" fill="currentColor" stroke="none"/>
+            <path d="M24 4.5v6M24 37.5v6M4.5 24h6M37.5 24h6"/>
+          </svg>
+        </div>
         <h3>Planejamento personalizado</h3>
         <p>Nenhum sorriso é tratado como padrão — cada plano é desenhado para o seu caso.</p>
       </div>
       <div class="d-card reveal">
-        <div class="d-icon"><img src="assets/img/icon-acompanhamento.jpg" alt="Acompanhamento próximo" loading="lazy"></div>
+        <div class="d-icon" role="img" aria-label="Acompanhamento próximo">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+            <path d="M8 31c6.5-13 25.5-13 32 0" stroke-dasharray=".2 5.2"/>
+            <circle cx="8" cy="31" r="2.6" fill="currentColor" stroke="none"/>
+            <circle cx="24" cy="19.3" r="2.6" fill="currentColor" stroke="none"/>
+            <circle cx="40" cy="31" r="2.6" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
         <h3>Acompanhamento próximo</h3>
         <p>Suporte constante durante todo o tratamento, do início ao sorriso final.</p>
       </div>
