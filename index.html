@@ -308,6 +308,22 @@
   }
   @media (max-width:560px){ .smile-band{height:220px;} }
 
+  /* ---------- detail duo ---------- */
+  .detail-duo{
+    position:relative;
+    display:grid;grid-template-columns:1fr 1fr;
+    height:260px;
+    background:var(--ink-950);
+  }
+  .detail-tile{background-size:cover;background-position:center;}
+  .detail-duo-caption{
+    position:absolute;left:0;right:0;bottom:0;z-index:1;margin:0;
+    padding:16px 24px 14px;text-align:center;
+    background:linear-gradient(0deg,rgba(2,2,3,.85) 0%,transparent 100%);
+    font-family:'Fraunces',serif;font-style:italic;font-size:.95rem;color:var(--gold-soft);
+  }
+  @media (max-width:560px){ .detail-duo{height:190px;} .detail-duo-caption{font-size:.82rem;} }
+
   /* ---------- antes/depois ---------- */
   #antes-depois{background:var(--ink-950);}
   .ad-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:900px;margin:0 auto;}
@@ -709,6 +725,12 @@
       <span class="ad-video-tag">Paciente real · resultado em vídeo</span>
     </div>
   </div>
+</section>
+
+<section class="detail-duo">
+  <div class="detail-tile" style="background-image:url('assets/img/detail-1.jpg')"></div>
+  <div class="detail-tile" style="background-image:url('assets/img/detail-2.jpg')"></div>
+  <p class="detail-duo-caption reveal">Técnica apurada e resultado natural, em cada detalhe.</p>
 </section>
 
 <section id="depoimentos">
