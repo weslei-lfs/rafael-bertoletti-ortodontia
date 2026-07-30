@@ -311,11 +311,12 @@
   /* ---------- detail duo ---------- */
   .detail-duo{
     position:relative;
-    display:grid;grid-template-columns:1fr 1fr;
+    display:flex;
     height:260px;
     background:var(--ink-950);
   }
-  .detail-tile{background-size:cover;background-position:center;}
+  .detail-tile{flex:1 1 50%;height:260px;background-size:cover;background-position:center;}
+  @media (max-width:560px){ .detail-tile{height:190px;} }
   .detail-duo-caption{
     position:absolute;left:0;right:0;bottom:0;z-index:1;margin:0;
     padding:16px 24px 14px;text-align:center;
