@@ -279,9 +279,15 @@
   .smile-band{
     position:relative;
     height:280px;
-    background:url('assets/img/smile-band-v5.jpg') center 50%/cover;
+    background:var(--ink-950);
     display:flex;align-items:center;justify-content:center;
     overflow:hidden;
+  }
+  .smile-band-photo{
+    position:absolute;top:0;bottom:0;left:50%;
+    transform:translateX(-50%);
+    width:100%;max-width:1180px;
+    background:url('assets/img/smile-band-v5.jpg') center 50%/cover;
   }
   .smile-band-overlay{
     position:absolute;inset:0;
@@ -297,13 +303,20 @@
   /* ---------- detail duo ---------- */
   .detail-duo{
     position:relative;
-    display:flex;
     height:320px;
     background:var(--ink-950);
+    overflow:hidden;
   }
-  .detail-tile{flex:1 1 50%;height:320px;background-size:cover;background-position:center;}
+  .detail-duo-inner{
+    position:absolute;top:0;bottom:0;left:50%;
+    transform:translateX(-50%);
+    width:100%;max-width:960px;
+    display:flex;
+  }
+  .detail-tile{flex:1 1 50%;height:100%;background-size:cover;background-position:center;}
   @media (max-width:720px){
-    .detail-duo{flex-direction:column;height:auto;}
+    .detail-duo{height:auto;}
+    .detail-duo-inner{position:static;transform:none;max-width:none;flex-direction:column;}
     .detail-tile{flex:none;width:100%;height:220px;}
   }
   .detail-duo-caption{
@@ -668,6 +681,7 @@
 </section>
 
 <section class="smile-band">
+  <div class="smile-band-photo"></div>
   <div class="smile-band-overlay"></div>
   <p class="smile-band-quote reveal">Cada detalhe do seu sorriso, pensado com precisão.</p>
 </section>
@@ -725,8 +739,10 @@
 </section>
 
 <section class="detail-duo">
-  <div class="detail-tile" style="background-image:url('assets/img/detail-1v5.jpg')"></div>
-  <div class="detail-tile" style="background-image:url('assets/img/detail-2v6.jpg')"></div>
+  <div class="detail-duo-inner">
+    <div class="detail-tile" style="background-image:url('assets/img/detail-1v5.jpg')"></div>
+    <div class="detail-tile" style="background-image:url('assets/img/detail-2v6.jpg')"></div>
+  </div>
   <p class="detail-duo-caption reveal">Precisão em cada detalhe do seu sorriso.</p>
 </section>
 
