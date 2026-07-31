@@ -275,32 +275,35 @@
   .d-card h3{font-size:1.02rem;margin-bottom:.4em;color:var(--ink-900);}
   .d-card p{font-size:.87rem;color:#57585b;margin-bottom:0;}
 
-  /* ---------- detail duo ---------- */
-  .detail-duo{
+  /* ---------- precision band ---------- */
+  .precision-band{
     position:relative;
     height:320px;
     background:var(--ink-950);
     overflow:hidden;
   }
-  .detail-duo-inner{
+  .precision-photo{
     position:absolute;top:0;bottom:0;left:50%;
     transform:translateX(-50%);
     width:100%;max-width:960px;
-    display:flex;
+    background-color:var(--ink-950);
+    background-image:url('assets/img/precisao-desktop.jpg');
+    background-position:center;background-repeat:no-repeat;background-size:contain;
   }
-  .detail-tile{flex:1 1 50%;height:100%;background-size:cover;background-position:center;}
-  @media (max-width:720px){
-    .detail-duo{height:auto;}
-    .detail-duo-inner{position:static;transform:none;max-width:none;flex-direction:column;}
-    .detail-tile{flex:none;width:100%;height:220px;}
-  }
-  .detail-duo-caption{
+  .precision-caption{
     position:absolute;left:0;right:0;bottom:0;z-index:1;margin:0;
     padding:16px 24px 14px;text-align:center;
     background:linear-gradient(0deg,rgba(2,2,3,.85) 0%,transparent 100%);
     font-family:'Fraunces',serif;font-style:italic;font-size:.95rem;color:var(--gold-soft);
   }
-  @media (max-width:560px){ .detail-duo-caption{font-size:.82rem;} }
+  @media (max-width:720px){
+    .precision-band{height:220px;}
+    .precision-photo{
+      max-width:480px;
+      background-image:url('assets/img/precisao-mobile.jpg');
+    }
+  }
+  @media (max-width:560px){ .precision-caption{font-size:.82rem;} }
 
   /* ---------- antes/depois ---------- */
   #antes-depois{background:var(--ink-950);}
@@ -707,12 +710,9 @@
   </div>
 </section>
 
-<section class="detail-duo">
-  <div class="detail-duo-inner">
-    <div class="detail-tile" style="background-image:url('assets/img/detail-1v5.jpg')"></div>
-    <div class="detail-tile" style="background-image:url('assets/img/detail-2v6.jpg')"></div>
-  </div>
-  <p class="detail-duo-caption reveal">Precisão em cada detalhe do seu sorriso.</p>
+<section class="precision-band">
+  <div class="precision-photo"></div>
+  <p class="precision-caption reveal">Precisão em cada detalhe do seu sorriso.</p>
 </section>
 
 <section id="depoimentos">
