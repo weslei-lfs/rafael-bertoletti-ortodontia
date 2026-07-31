@@ -287,7 +287,9 @@
     position:absolute;top:0;bottom:0;left:50%;
     transform:translateX(-50%);
     width:100%;max-width:1180px;
-    background:url('assets/img/smile-band-v8.jpg') center 50%/cover;
+    background-color:var(--ink-950);
+    background-image:url('assets/img/smile-band-desktop.jpg');
+    background-position:center;background-repeat:no-repeat;background-size:contain;
   }
   .smile-band-overlay{
     position:absolute;inset:0;
@@ -298,7 +300,13 @@
     font-family:'Fraunces',serif;font-style:italic;font-weight:400;
     font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--white);line-height:1.4;margin:0;
   }
-  @media (max-width:560px){ .smile-band{height:220px;} }
+  @media (max-width:560px){
+    .smile-band{height:220px;}
+    .smile-band-photo{
+      max-width:480px;
+      background-image:url('assets/img/smile-band-mobile.jpg');
+    }
+  }
 
   /* ---------- detail duo ---------- */
   .detail-duo{
