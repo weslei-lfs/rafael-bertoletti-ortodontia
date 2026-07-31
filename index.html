@@ -296,14 +296,21 @@
     background:linear-gradient(0deg,rgba(2,2,3,.85) 0%,transparent 100%);
     font-family:'Fraunces',serif;font-style:italic;font-size:.95rem;color:var(--gold-soft);
   }
+  .precision-logo{
+    position:absolute;left:7%;top:46%;transform:translateY(-50%);
+    width:200px;opacity:.92;
+    filter:drop-shadow(0 4px 18px rgba(0,0,0,.5));
+  }
   @media (max-width:720px){
     .precision-band{height:220px;}
     .precision-photo{
       max-width:480px;
       background-image:url('assets/img/precisao-mobile.jpg');
     }
+    .precision-logo{width:130px;left:6%;}
   }
   @media (max-width:560px){ .precision-caption{font-size:.82rem;} }
+  @media (max-width:420px){ .precision-logo{width:100px;} }
 
   /* ---------- antes/depois ---------- */
   #antes-depois{background:var(--ink-950);}
@@ -712,6 +719,7 @@
 
 <section class="precision-band">
   <div class="precision-photo"></div>
+  <img src="assets/img/brand/logo-full-transparent.png" alt="Rafael Bertoletti — Designer de Sorrisos" class="precision-logo reveal">
   <p class="precision-caption reveal">Precisão em cada detalhe do seu sorriso.</p>
 </section>
 
