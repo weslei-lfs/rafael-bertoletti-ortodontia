@@ -275,39 +275,6 @@
   .d-card h3{font-size:1.02rem;margin-bottom:.4em;color:var(--ink-900);}
   .d-card p{font-size:.87rem;color:#57585b;margin-bottom:0;}
 
-  /* ---------- smile band ---------- */
-  .smile-band{
-    position:relative;
-    height:280px;
-    background:var(--ink-950);
-    display:flex;align-items:center;justify-content:center;
-    overflow:hidden;
-  }
-  .smile-band-photo{
-    position:absolute;top:0;bottom:0;left:50%;
-    transform:translateX(-50%);
-    width:100%;max-width:1180px;
-    background-color:var(--ink-950);
-    background-image:url('assets/img/smile-band-desktop-v2.jpg');
-    background-position:center;background-repeat:no-repeat;background-size:contain;
-  }
-  .smile-band-overlay{
-    position:absolute;inset:0;
-    background:linear-gradient(90deg,rgba(2,2,3,.88) 0%,rgba(2,2,3,.55) 50%,rgba(2,2,3,.88) 100%);
-  }
-  .smile-band-quote{
-    position:relative;z-index:1;max-width:600px;text-align:center;padding:0 24px;
-    font-family:'Fraunces',serif;font-style:italic;font-weight:400;
-    font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--white);line-height:1.4;margin:0;
-  }
-  @media (max-width:560px){
-    .smile-band{height:220px;}
-    .smile-band-photo{
-      max-width:480px;
-      background-image:url('assets/img/smile-band-mobile-v2.jpg');
-    }
-  }
-
   /* ---------- detail duo ---------- */
   .detail-duo{
     position:relative;
@@ -686,12 +653,6 @@
       </div>
     </div>
   </div>
-</section>
-
-<section class="smile-band">
-  <div class="smile-band-photo"></div>
-  <div class="smile-band-overlay"></div>
-  <p class="smile-band-quote reveal">Cada detalhe do seu sorriso, pensado com precisão.</p>
 </section>
 
 <section id="antes-depois" class="on-dark">
